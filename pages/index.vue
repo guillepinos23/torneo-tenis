@@ -685,11 +685,6 @@ input[type=text], input:not([type=number]) {
 .duel-name.right { right: -100%; }
 .duel-name.left.fly  { left: 5%; filter: blur(0px); opacity: 1; }
 .duel-name.right.fly { right: 5%; filter: blur(0px); opacity: 1; }
-.duel-name.left  { left: -100%; transform: translateX(0); }
-.duel-name.right { right: -100%; transform: translateX(0); }
-
-.duel-name.left.fly  { left: 5%; filter: blur(0px); opacity: 1; }
-.duel-name.right.fly { right: 5%; filter: blur(0px); opacity: 1; }
 
 
 .duel-center {
