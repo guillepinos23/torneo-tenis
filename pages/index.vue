@@ -670,19 +670,27 @@ input[type=text], input:not([type=number]) {
 .duel-name {
   position: absolute;
   font-family: 'Bebas Neue', display;
-  font-size: clamp(2rem, 8vw, 3.5rem);
+  font-size: clamp(1.4rem, 5vw, 2.5rem);
   color: #fff;
   letter-spacing: 0.05em;
   filter: blur(8px);
   opacity: 0;
   transition: all 0.8s cubic-bezier(.22,1,.36,1);
   white-space: nowrap;
+  max-width: 35%;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
+.duel-name.left  { left: -100%; }
+.duel-name.right { right: -100%; }
+.duel-name.left.fly  { left: 5%; filter: blur(0px); opacity: 1; }
+.duel-name.right.fly { right: 5%; filter: blur(0px); opacity: 1; }
 .duel-name.left  { left: -100%; transform: translateX(0); }
 .duel-name.right { right: -100%; transform: translateX(0); }
 
-.duel-name.left.fly  { left: 15%; filter: blur(0px); opacity: 1; }
-.duel-name.right.fly { right: 15%; filter: blur(0px); opacity: 1; }
+.duel-name.left.fly  { left: 5%; filter: blur(0px); opacity: 1; }
+.duel-name.right.fly { right: 5%; filter: blur(0px); opacity: 1; }
+
 
 .duel-center {
   opacity: 0;
