@@ -12,6 +12,7 @@
           @keydown.enter="check"
         />
         <button @click="check">ENTRAR</button>
+        <button class="cancel-btn" @click="$emit('close')">Cancelar</button>
         <p v-if="error" class="err-msg">Contraseña incorrecta</p>
       </div>
     </div>
@@ -101,5 +102,13 @@ button:hover { background: #d4eb30; }
   font-family: 'Space Mono', monospace;
   font-size: 0.72rem;
   margin-top: 10px;
+}
+.cancel-btn {
+  width: 100%; background: transparent;
+  border: 1px solid #2a2a2a; border-radius: 10px;
+  padding: 10px; color: #666;
+  font-family: 'Space Mono', monospace;
+  font-size: 0.8rem; cursor: pointer;
+  margin-bottom: 8px;
 }
 </style>
