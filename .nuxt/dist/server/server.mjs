@@ -1,0 +1,1 @@
+export { default } from "file:///C:/Users/Guille/Downloads/torneo-tenis/torneo-tenis/node_modules/@nuxt/vite-builder/dist/runtime/vite-node.mjs"

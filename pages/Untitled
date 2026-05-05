@@ -1,0 +1,1 @@
+<p class="mono-label">{{ doneMatches }} / {{ totalMatches }} partidos · {{ players.length }} jugadores</p>
