@@ -765,7 +765,7 @@ input[type=text], input:not([type=number]) {
 }
 .meta-small {
   font-family: 'Space Mono', monospace;
-  font-size: 0.6rem; color: #555; letter-spacing: 0.06em;
+  font-size: 0.75rem; color: #888; letter-spacing: 0.06em;
 }
 .meta-divider {
   width: 1px; height: 40px; background: #2a2a2a;
