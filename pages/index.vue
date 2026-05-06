@@ -159,6 +159,17 @@
         <div class="torneo-header">
           <div>
             <h1 class="torneo-title">OPEN CLASE 🎾</h1>
+            <div class="torneo-meta">
+              <div class="meta-block">
+                <span class="meta-big">{{ daysLeft }}</span>
+                <span class="meta-small">días restantes</span>
+              </div>
+              <div class="meta-divider" />
+              <div class="meta-block">
+                <span class="meta-big">28 JUN</span>
+                <span class="meta-small">fecha fin</span>
+              </div>
+            </div>
             <p class="torneo-subtitle">{{ doneMatches }} / {{ totalMatches }} partidos · {{ players.length }} jugadores</p>
           </div>
           <button v-if="isAdmin" class="btn-reset" @click="handleReset">↩ RESET</button>
@@ -287,6 +298,12 @@ const { isAdmin } = useAdmin()
 
 const showAdminGate = ref(false)
 const drawDate = ref('Miercoles 6 de Mayo a las 23:15')
+const endDate = new Date('2025-06-28')
+const daysLeft = computed(() => {
+  const today = new Date()
+  today.setHours(0, 0, 0, 0)
+  return Math.max(0, Math.ceil((endDate.getTime() - today.getTime()) / (1000 * 60 * 60 * 24)))
+})
 const newName = ref('')
 const newNickname = ref('')
 const regError = ref('')
@@ -735,5 +752,22 @@ input[type=text], input:not([type=number]) {
   flex: 1; background: transparent; border: none;
   color: #fff; font-family: 'Space Mono', monospace;
   font-size: 0.8rem; outline: none;
+}
+.torneo-meta {
+  display: flex; align-items: center; gap: 20px; margin: 8px 0 4px;
+}
+.meta-block {
+  display: flex; flex-direction: column; gap: 2px;
+}
+.meta-big {
+  font-family: 'Bebas Neue', display;
+  font-size: 2.2rem; color: #E8FF4A; line-height: 1;
+}
+.meta-small {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.6rem; color: #555; letter-spacing: 0.06em;
+}
+.meta-divider {
+  width: 1px; height: 40px; background: #2a2a2a;
 }
 </style>
