@@ -298,7 +298,7 @@ const { isAdmin } = useAdmin()
 
 const showAdminGate = ref(false)
 const drawDate = ref('Miercoles 6 de Mayo a las 23:15')
-const endDate = new Date('2025-06-28')
+const endDate = new Date('2026-06-28')
 const daysLeft = computed(() => {
   const today = new Date()
   today.setHours(0, 0, 0, 0)
@@ -761,7 +761,7 @@ input[type=text], input:not([type=number]) {
 }
 .meta-big {
   font-family: 'Bebas Neue', display;
-  font-size: 2.2rem; color: #E8FF4A; line-height: 1;
+  font-size: 3rem; color: #E8FF4A; line-height: 1;
 }
 .meta-small {
   font-family: 'Space Mono', monospace;
